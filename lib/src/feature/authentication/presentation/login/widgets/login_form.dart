@@ -32,6 +32,7 @@ class _LoginFormState extends ConsumerState<_LoginForm> {
           ),
           const SizedBox(height: 4),
           TextField(
+            key: const Key("phoneNumberKey"),
             controller: widget.phoneController,
             decoration: const InputDecoration(hintText: "+880-X-XXXXXXX"),
             onChanged: (value) {
@@ -46,6 +47,7 @@ class _LoginFormState extends ConsumerState<_LoginForm> {
             ),
             const SizedBox(height: 4),
             TextField(
+              key: const Key("passwordKey"),
               controller: widget.otpController,
               decoration: const InputDecoration(
                 hintText: "XXXX",
@@ -56,6 +58,7 @@ class _LoginFormState extends ConsumerState<_LoginForm> {
             ),
             const SizedBox(height: 10),
             RichText(
+              key: const Key("resendKey"),
               text: TextSpan(
                 text: "Didn't receive OTP? ",
                 style: TextStyle(
